@@ -1,14 +1,18 @@
-/* eslint-disable no-unused-vars */
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import Login from './pages/Login';
 
-import './App.css'
-
-const App = () => {
+function App() {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold">Authenticated Workout Log</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
-export default App
+export default App;
