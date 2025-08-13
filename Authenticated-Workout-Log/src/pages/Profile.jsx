@@ -1,9 +1,19 @@
+import { useAuth0 } from '@auth0/auth0-react';
+
 const Profile = () => {
-    return (
-      <div className="p-6">
-        <h1 className="text-3xl font-bold">Profile Page</h1>
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+  if (isLoading) return <div>Loading...</div>;
+
+  return (
+    isAuthenticated && (
+      <div className="p-4">
+        <img src={user.picture} alt={user.name} className="w-20 h-20 rounded-full" />
+        <h2 className="text-xl">{user.name}</h2>
+        <p>{user.email}</p>
       </div>
-    );
-  };
-  
-  export default Profile;
+    )
+  );
+};
+
+export default Profile;
