@@ -8,7 +8,7 @@ const domain =  "dev-zue7rm3akv160ugb.us.auth0.com"
 const clientId = 'lEyCePyNX0LAdk8EeZG9cT4hXZeYRDMj'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <StrictMode>
     <Auth0Provider
       domain={domain}
       clientId={clientId}
@@ -16,5 +16,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     >
       <App />
     </Auth0Provider>
-  </React.StrictMode>
+  </StrictMode>
 )
