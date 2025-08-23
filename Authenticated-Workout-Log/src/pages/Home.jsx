@@ -13,16 +13,8 @@ export default function Home() {
           alt="Running"
           className="rounded-2xl shadow-lg"
         />
-        <img
-          src="https://images.unsplash.com/photo-1554344053-1eab9f2d6f97"
-          alt="Yoga"
-          className="rounded-2xl shadow-lg"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
-          alt="Healthy Food"
-          className="rounded-2xl shadow-lg"
-        />
+        
+        
       </div>
     </div>
   );
